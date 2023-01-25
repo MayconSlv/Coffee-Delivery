@@ -6,9 +6,7 @@ import { Home } from './pages/Home'
 export function App() {
   return(
     <ThemeProvider theme={defaultTheme} >
-      <div>
-        <Home/>
-      </div>
+      <Home/>
       <GlobalStyle />
     </ThemeProvider>
   )
