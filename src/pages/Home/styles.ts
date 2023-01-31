@@ -32,3 +32,9 @@ export const BenefitsLayout = styled.div`
   margin: 5rem 0;
   gap: 2rem;
 `
+
+export const CoffeeContainer = styled.main`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.2rem;
+`
