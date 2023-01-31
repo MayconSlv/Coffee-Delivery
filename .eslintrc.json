@@ -18,6 +18,7 @@
     },
     "plugins": [
         "react",
+        "jsx-ally",
         "@typescript-eslint"
     ],
     "rules": {
