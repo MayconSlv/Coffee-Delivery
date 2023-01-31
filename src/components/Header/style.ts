@@ -1,12 +1,10 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 85%;
-  margin: 0 auto;
   padding: 2rem;
 
   div {
@@ -18,7 +16,7 @@ export const HeaderContainer = styled.header`
 `
 
 const baseButton = styled.a`
-  padding: .8rem;
+  padding: 0.8rem;
   display: flex;
   align-items: center;
   font-size: 1.4rem;
@@ -26,11 +24,11 @@ const baseButton = styled.a`
   border-radius: 6px;
 `
 export const LocalButton = styled(baseButton)`
-  background-color: ${(props) => props.theme["purple-light"]};
-  color: ${(props) => props.theme["purple-dark"]};
+  background-color: ${(props) => props.theme['purple-light']};
+  color: ${(props) => props.theme['purple-dark']};
 `
 
 export const CartButton = styled(baseButton)`
-  background-color: ${(props) => props.theme["yellow-light"]};
-  color: ${(props) => props.theme["yellow-dark"]};
+  background-color: ${(props) => props.theme['yellow-light']};
+  color: ${(props) => props.theme['yellow-dark']};
 `
