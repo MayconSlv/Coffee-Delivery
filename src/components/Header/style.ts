@@ -24,11 +24,11 @@ const baseButton = styled.a`
   border-radius: 6px;
 `
 export const LocalButton = styled(baseButton)`
-  background-color: ${(props) => props.theme['purple-light']};
-  color: ${(props) => props.theme['purple-dark']};
+  background-color: ${(props) => props.theme.colors['purple-light']};
+  color: ${(props) => props.theme.colors['purple-dark']};
 `
 
 export const CartButton = styled(baseButton)`
-  background-color: ${(props) => props.theme['yellow-light']};
-  color: ${(props) => props.theme['yellow-dark']};
+  background-color: ${(props) => props.theme.colors['yellow-light']};
+  color: ${(props) => props.theme.colors['yellow-dark']};
 `
