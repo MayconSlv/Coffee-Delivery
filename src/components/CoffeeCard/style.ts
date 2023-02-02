@@ -50,6 +50,22 @@ export const CardDesc = styled.div`
 `
 export const PriceContainer = styled.div`
   display: flex;
+  margin-top: 2rem;
+  gap: 2.3rem;
+`
+
+export const Price = styled.div`
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: ${(props) => props.theme.colors['base-text']};
+  display: flex;
+  align-items: center;
+
+  span:last-child {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    font-size: 2.4rem;
+  }
 `
 
 export const ButtonsContainer = styled.div`
@@ -70,6 +86,10 @@ export const CounterButton = styled.span`
   background: ${(props) => props.theme.colors['base-button']};
 
   border-radius: 6px;
+
+  svg {
+    color: ${(props) => props.theme.colors['base-purple']};
+  }
 `
 
 export const CartIconContainer = styled.button`

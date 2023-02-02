@@ -1,4 +1,4 @@
-import { ShoppingCart } from 'phosphor-react'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import expresso from '../../assets/coffees/Type=Expresso.svg'
 import {
   ButtonsContainer,
@@ -6,6 +6,7 @@ import {
   CardDesc,
   CartIconContainer,
   CounterButton,
+  Price,
   PriceContainer,
   TradicionalText,
 } from './style'
@@ -23,11 +24,15 @@ export function CoffeeCard() {
       </CardDesc>
 
       <PriceContainer>
-        <span>R$</span>
-        <span>9,90</span>
+        <Price>
+          <span>R$</span>
+          <span>9,90</span>
+        </Price>
 
         <ButtonsContainer>
-          <CounterButton>1</CounterButton>
+          <CounterButton>
+            <Plus size={14} weight='bold' /> 1 <Minus size={14} weight='bold' />
+          </CounterButton>
           <CartIconContainer>
             <ShoppingCart weight='fill' size={20} />
           </CartIconContainer>
