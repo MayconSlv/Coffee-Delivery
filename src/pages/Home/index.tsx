@@ -3,7 +3,13 @@ import { useTheme } from 'styled-components'
 
 import introImage from '../../assets/intro.svg'
 
-import { BenefitsLayout, CoffeeContainer, Intro, IntroText } from './styles'
+import {
+  BenefitsLayout,
+  CoffeeContainer,
+  Intro,
+  IntroText,
+  MainContent,
+} from './styles'
 import { InfoIcon } from '../../components/InfoIcon'
 import { CoffeeCard } from '../../components/CoffeeCard'
 
@@ -49,16 +55,18 @@ export function Home() {
         <img src={introImage} alt='' />
       </Intro>
 
-      <h2>Nossos cafés</h2>
-      <CoffeeContainer>
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-      </CoffeeContainer>
+      <MainContent>
+        <h2>Nossos cafés</h2>
+        <CoffeeContainer>
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+        </CoffeeContainer>
+      </MainContent>
     </>
   )
 }

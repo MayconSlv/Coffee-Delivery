@@ -50,6 +50,7 @@ export const CardDesc = styled.div`
 `
 export const PriceContainer = styled.div`
   display: flex;
+  align-items: center;
   margin-top: 2rem;
   gap: 2.3rem;
 `
@@ -59,7 +60,6 @@ export const Price = styled.div`
   line-height: 1.8rem;
   color: ${(props) => props.theme.colors['base-text']};
   display: flex;
-  align-items: center;
 
   span:last-child {
     font-family: 'Baloo 2';

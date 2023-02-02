@@ -31,7 +31,7 @@ export function CoffeeCard() {
 
         <ButtonsContainer>
           <CounterButton>
-            <Plus size={14} weight='bold' /> 1 <Minus size={14} weight='bold' />
+            <Minus size={14} weight='bold' /> 1 <Plus size={14} weight='bold' />
           </CounterButton>
           <CartIconContainer>
             <ShoppingCart weight='fill' size={20} />
