@@ -38,18 +38,22 @@ export const Tags = styled.div`
 `
 
 export const CardDesc = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   h4 {
     color: ${(props) => props.theme.colors['base-subtitle']};
     font-weight: 700;
     font-size: 2rem;
     font-family: 'Baloo 2', sans-serif;
+    line-height: 2.6rem;
   }
 
   p {
     color: ${(props) => props.theme.colors['base-label']};
     font-size: 1.4rem;
     line-height: 1.8rem;
-    margin: 0.8rem 0;
   }
 `
 export const CardFooter = styled.div`
@@ -60,6 +64,9 @@ export const CardFooter = styled.div`
 `
 
 export const Price = styled.div`
+  display: flex;
+  gap: 4px;
+
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: ${(props) => props.theme.colors['base-text']};
