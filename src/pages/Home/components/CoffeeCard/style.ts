@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   text-align: center;
@@ -21,16 +22,19 @@ export const CardContainer = styled.div`
 `
 
 export const Tags = styled.div`
-  padding: 4px 8px;
-  border-radius: 100px;
+  display: flex;
+  gap: 4px;
 
-  background: ${(props) => props.theme.colors['yellow-light']};
-  color: ${(props) => props.theme.colors['yellow-dark']};
+  span {
+    padding: 4px 8px;
+    border-radius: 100px;
 
-  font-weight: 700;
-  font-size: 1rem;
+    background: ${(props) => props.theme.colors['yellow-light']};
+    color: ${(props) => props.theme.colors['yellow-dark']};
 
-  margin: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
 `
 
 export const CardDesc = styled.div`
