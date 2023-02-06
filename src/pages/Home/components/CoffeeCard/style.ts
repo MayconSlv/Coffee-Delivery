@@ -20,7 +20,7 @@ export const CardContainer = styled.div`
   }
 `
 
-export const TradicionalText = styled.span`
+export const Tags = styled.div`
   padding: 4px 8px;
   border-radius: 100px;
 

@@ -11,7 +11,8 @@ import {
   MainContent,
 } from './styles'
 import { InfoIcon } from '../../components/InfoIcon'
-import { CoffeeCard } from '../../components/CoffeeCard'
+import { CoffeeCard } from './components/CoffeeCard'
+import { coffees } from '../../datas/coffees'
 
 export function Home() {
   const { colors } = useTheme()
@@ -58,13 +59,9 @@ export function Home() {
       <MainContent>
         <h2>Nossos cafés</h2>
         <CoffeeContainer>
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
+          {coffees.map((coffee) => (
+            <CoffeeCard key={coffee.id} coffee={coffee} />
+          ))}
         </CoffeeContainer>
       </MainContent>
     </>
