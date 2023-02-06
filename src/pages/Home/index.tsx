@@ -19,7 +19,7 @@ export function Home() {
 
   return (
     <>
-      <Intro>
+      <Intro className='container'>
         <div>
           <IntroText>
             <h1>Enconter o café perfeito para qualquer hora do dia </h1>
@@ -56,7 +56,7 @@ export function Home() {
         <img src={introImage} alt='' />
       </Intro>
 
-      <MainContent>
+      <MainContent className='container'>
         <h2>Nossos cafés</h2>
         <CoffeeContainer>
           {coffees.map((coffee) => (

@@ -1,15 +1,19 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: ${(props) => props.theme.colors['base-white']};
+
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 10;
 
   padding: 2rem;
 
   div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.2rem;
     font-size: 1.4rem;
   }
