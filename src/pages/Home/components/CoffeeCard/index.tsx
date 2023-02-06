@@ -3,10 +3,9 @@ import {
   CardFooter,
   CardContainer,
   CardDesc,
-  CartIconContainer,
   Price,
-  PriceContainer,
   Tags,
+  FooterButtons,
 } from './style'
 import { QuantityInput } from '../../../../components/QuantityInput'
 
@@ -39,21 +38,19 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
         <p>{coffee.description}</p>
       </CardDesc>
 
-      <PriceContainer>
+      <CardFooter>
         <Price>
           <span>R$</span>
           <span>{coffee.price}</span>
         </Price>
 
-        <CardFooter>
-          <div>
-            <QuantityInput />
-          </div>
-          <CartIconContainer>
-            <ShoppingCart weight='fill' size={20} />
-          </CartIconContainer>
-        </CardFooter>
-      </PriceContainer>
+        <FooterButtons>
+          <QuantityInput />
+          <button>
+            <ShoppingCart weight='fill' size={22} />
+          </button>
+        </FooterButtons>
+      </CardFooter>
     </CardContainer>
   )
 }

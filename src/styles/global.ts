@@ -17,8 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
   }
 
-  body {
+  body, input, button {
     font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.colors['base-text']};
+    font-weight: 400;
   }
 
   input::-webkit-outer-spin-button,

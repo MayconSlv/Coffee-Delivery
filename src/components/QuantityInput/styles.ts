@@ -12,7 +12,7 @@ export const QuantityInputContainer = styled.div`
   gap: 4px;
 
   width: 7.2rem;
-  height: 3.2rem;
+  height: 3.8rem;
 
   input {
     width: 100%;
@@ -21,9 +21,7 @@ export const QuantityInputContainer = styled.div`
     text-align: center;
 
     color: ${({ theme }) => theme.colors['base-text']}
-    font-size: 1.6rem;
-    font-family: 'Roboto';
-
+    
     &:focus {
       outline: none;
     }

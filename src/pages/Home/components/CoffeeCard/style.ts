@@ -52,7 +52,7 @@ export const CardDesc = styled.div`
     margin: 0.8rem 0;
   }
 `
-export const PriceContainer = styled.div`
+export const CardFooter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 2rem;
@@ -72,31 +72,25 @@ export const Price = styled.div`
   }
 `
 
-export const CardFooter = styled.div`
+export const FooterButtons = styled.div`
   display: flex;
   gap: 0.8rem;
-`
 
-export const CounterButton = styled.span`
-  width: 7.2rem;
+  width: 11.8rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem;
-
-  padding: 0.8rem;
-
-  background: ${(props) => props.theme.colors['base-button']};
-
-  border-radius: 6px;
-
-  svg {
-    color: ${(props) => props.theme.colors['base-purple']};
+  > button {
+    width: 3.8rem;
+    height: 3.8rem;
+    border: none;
+    background: ${({ theme }) => theme.colors['purple-dark']};
+    color: ${({ theme }) => theme.colors['base-white']};
+    border-radius: 6px;
   }
 `
 
-export const CartIconContainer = styled.button`
+export const CartIconContainer = styled.button.attrs({
+  type: 'button',
+})`
   border: 0;
   border-radius: 6px;
 
