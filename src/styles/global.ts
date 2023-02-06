@@ -12,12 +12,22 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.background};
-    color: ${(props) => props.theme['base-text']};
+    background-color: ${(props) => props.theme.colors['base-background']};
+    color: ${(props) => props.theme.colors['base-text']};
     font-size: 1.6rem;
   }
 
   body {
     font-family: 'Roboto', sans-serif;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 `

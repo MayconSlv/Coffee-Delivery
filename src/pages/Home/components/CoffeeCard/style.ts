@@ -72,7 +72,7 @@ export const Price = styled.div`
   }
 `
 
-export const ButtonsContainer = styled.div`
+export const CardFooter = styled.div`
   display: flex;
   gap: 0.8rem;
 `
