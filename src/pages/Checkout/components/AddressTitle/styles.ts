@@ -2,10 +2,8 @@ import styled from 'styled-components'
 
 export const AddressFormTitle = styled.div`
   display: flex;
+  gap: 8px;
   margin-bottom: 3.2rem;
-  svg {
-    color: ${({ theme }) => theme.colors['yellow-dark']};
-  }
 
   > p {
     font-family: 'Roboto';
