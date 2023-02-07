@@ -5,7 +5,14 @@ export const FormContainer = styled.form`
   gap: 3.2rem;
 
   div {
-    margin-bottom: 1.2rem;
+    h2 {
+      color: ${({ theme }) => theme.colors['base-subtitle']};
+      font-family: 'Baloo 2';
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.3rem;
+      margin: 1.5rem 0;
+    }
   }
 `
 

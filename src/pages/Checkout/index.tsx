@@ -1,6 +1,7 @@
 import { FormContainer } from './style'
 import { AddressForm } from './components/AddressForm'
 import { PaymentMethod } from './components/PaymentMethod'
+import { CoffeeCart } from './components/CoffeesCarts'
 
 export function Checkout() {
   return (
@@ -10,6 +11,8 @@ export function Checkout() {
         <AddressForm />
         <PaymentMethod />
       </div>
+
+      <CoffeeCart />
     </FormContainer>
   )
 }

@@ -19,6 +19,7 @@ export const InputContainer = styled.div`
 
   border-radius: 6px;
 
+  user-select: none;
   svg {
     color: ${({ theme }) => theme.colors['base-purple']};
   }

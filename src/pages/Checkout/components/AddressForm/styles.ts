@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { BaseCard } from '../../style'
 
 export const AddressFormContainer = styled(BaseCard)`
+  margin-bottom: 1.2rem;
+
   input {
     border: 1px solid ${({ theme }) => theme.colors['base-button']};
     background: ${({ theme }) => theme.colors['base-input']};
