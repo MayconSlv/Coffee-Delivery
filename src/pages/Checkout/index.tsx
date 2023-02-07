@@ -1,5 +1,5 @@
 import { FormContainer } from './style'
-import { AddressForm } from './components/Address'
+import { AddressForm } from './components/AddressForm'
 import { PaymentMethod } from './components/PaymentMethod'
 
 export function Checkout() {
