@@ -1,0 +1,34 @@
+import styled from 'styled-components'
+
+export const IntroContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding: 9rem;
+`
+
+export const IntroText = styled.div`
+  width: 58.8rem;
+
+  h1 {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    font-size: 4.8rem;
+    line-height: 6.24rem;
+
+    color: ${(props) => props.theme.colors['base-title']};
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: ${(props) => props.theme.colors['base-subtitle']};
+  }
+`
+
+export const BenefitsLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5rem 0;
+  gap: 2rem;
+`
