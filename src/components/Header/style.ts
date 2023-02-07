@@ -28,6 +28,9 @@ const baseButton = styled.a`
   border-radius: 6px;
 `
 export const LocalButton = styled(baseButton)`
+  > svg {
+    color: ${(props) => props.theme.colors['base-purple']};
+  }
   background-color: ${(props) => props.theme.colors['purple-light']};
   color: ${(props) => props.theme.colors['purple-dark']};
 `
