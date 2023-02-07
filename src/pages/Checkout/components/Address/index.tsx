@@ -1,17 +1,8 @@
-import { MapPin } from 'phosphor-react'
-import { AddressFormContainer, AddressFormTitle, InputsLayout } from './styles'
+import { AddressFormContainer, InputsLayout } from './styles'
 
 export function AddressForm() {
   return (
     <AddressFormContainer>
-      <AddressFormTitle>
-        <MapPin size={22} />
-        <div>
-          <p>Endereço de entrega</p>
-          <span>Informe o endereço onde deseja receber o seu pedido</span>
-        </div>
-      </AddressFormTitle>
-
       <InputsLayout>
         <input type='text' className='cep' placeholder='CEP' />
         <input type='text' className='street' placeholder='RUA' />
