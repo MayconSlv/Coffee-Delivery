@@ -2,7 +2,6 @@
 import { CoffeeCartCardContainer } from './styles'
 import cafe from '../../../../../../public/coffees/Type=Americano.svg'
 import { QuantityInput } from '../../../../../components/QuantityInput'
-import { RemoveButton } from '../RemoveButton'
 
 export function CoffeeCartCard() {
   return (
@@ -14,7 +13,6 @@ export function CoffeeCartCard() {
             <p>Expresso tradicional</p>
             <div className='icons'>
               <QuantityInput />
-              <RemoveButton />
             </div>
           </div>
         </div>

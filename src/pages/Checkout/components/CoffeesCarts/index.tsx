@@ -10,6 +10,8 @@ export function CoffeeCart() {
         <CoffeeCartCard />
         <CoffeeCartCard />
       </SelectedCoffees>
+
+      <button>fasduhfsu</button>
     </CoffeeCartContainer>
   )
 }
