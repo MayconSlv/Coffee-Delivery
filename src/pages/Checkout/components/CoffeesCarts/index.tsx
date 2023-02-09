@@ -1,4 +1,4 @@
-import { CoffeeCartCard } from './CoffeCartCard'
+import { CoffeeCartCard } from '../CoffeCartCard'
 import { CoffeeCartContainer, SelectedCoffees } from './sytles'
 
 export function CoffeeCart() {
