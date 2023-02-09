@@ -39,6 +39,9 @@ export const CardDetails = styled.div`
 export const CardActions = styled.div`
   display: flex;
   gap: 8px;
+  > div {
+    height: 3.2rem;
+  }
 `
 
 export const RemoveButton = styled.button`
@@ -51,6 +54,7 @@ export const RemoveButton = styled.button`
   gap: 4px;
   font-size: 1.2rem;
   color: ${({ theme }) => theme.colors['base-text']};
+  height: 3.2rem;
 
   svg {
     color: ${({ theme }) => theme.colors['base-purple']};

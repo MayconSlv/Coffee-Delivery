@@ -25,6 +25,8 @@ export const QuantityInputContainer = styled.div`
     &:focus {
       outline: none;
     }
+
+
   }
 `
 
