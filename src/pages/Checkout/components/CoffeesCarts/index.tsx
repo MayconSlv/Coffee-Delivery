@@ -1,3 +1,4 @@
+import { ConfirmButton } from '../../../../components/ConfirmButton'
 import { CoffeeCartCard } from '../CoffeCartCard'
 import { CoffeeCartContainer, SelectedCoffees } from './sytles'
 
@@ -9,9 +10,8 @@ export function CoffeeCart() {
         <CoffeeCartCard />
         <CoffeeCartCard />
         <CoffeeCartCard />
+        <ConfirmButton />
       </SelectedCoffees>
-
-      <button>fasduhfsu</button>
     </CoffeeCartContainer>
   )
 }
