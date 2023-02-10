@@ -5,16 +5,14 @@ import { Intro } from './components/Intro/index'
 
 export function Home() {
   return (
-    <>
-      <MainContent className='container'>
-        <Intro />
-        <h2>Nossos cafés</h2>
-        <CoffeeContainer>
-          {coffees.map((coffee) => (
-            <CoffeeCard key={coffee.id} coffee={coffee} />
-          ))}
-        </CoffeeContainer>
-      </MainContent>
-    </>
+    <MainContent className='container'>
+      <Intro />
+      <h2>Nossos cafés</h2>
+      <CoffeeContainer>
+        {coffees.map((coffee) => (
+          <CoffeeCard key={coffee.id} coffee={coffee} />
+        ))}
+      </CoffeeContainer>
+    </MainContent>
   )
 }

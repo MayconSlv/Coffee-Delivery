@@ -16,6 +16,7 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     gap: 1.2rem;
     font-size: 1.4rem;
+    padding-bottom: 1px;
   }
 `
 
@@ -28,6 +29,8 @@ const baseButton = styled.a`
   border-radius: 6px;
 `
 export const LocalButton = styled(baseButton)`
+  display: flex;
+  gap: 4px;
   > svg {
     color: ${(props) => props.theme.colors['base-purple']};
   }

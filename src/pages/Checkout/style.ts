@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const FormContainer = styled.form`
   display: flex;
   gap: 3.2rem;
+  padding-bottom: 24rem;
 `
 
 export const BaseCard = styled.div`
