@@ -1,5 +1,5 @@
-import { ConfirmButton } from '../../../../components/ConfirmButton'
 import { CoffeeCartCard } from '../CoffeCartCard'
+import { SubmitCoffees } from './SubmitCoffees'
 import { CoffeeCartContainer, SelectedCoffees } from './sytles'
 
 export function CoffeeCart() {
@@ -9,8 +9,7 @@ export function CoffeeCart() {
       <SelectedCoffees>
         <CoffeeCartCard />
         <CoffeeCartCard />
-        <CoffeeCartCard />
-        <ConfirmButton />
+        <SubmitCoffees />
       </SelectedCoffees>
     </CoffeeCartContainer>
   )

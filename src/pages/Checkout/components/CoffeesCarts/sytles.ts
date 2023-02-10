@@ -18,3 +18,31 @@ export const SelectedCoffees = styled(BaseCard)`
   border-radius: 6px 44px;
   width: 44.8rem;
 `
+
+// SubmitCoffeesContainer
+
+export const TotalPrice = styled.div`
+  margin-bottom: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+
+    p {
+      font-size: 1.4rem;
+      color: ${({ theme }) => theme.colors['base-text']};
+    }
+  }
+`
+
+export const SubmitCoffeesContainer = styled.div`
+  .total p {
+    font-weight: 700;
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors['base-subtitle']};
+  }
+`
