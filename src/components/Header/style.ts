@@ -20,7 +20,7 @@ export const HeaderContainer = styled.header`
   }
 `
 
-const baseButton = styled.a`
+const baseButton = styled.span`
   padding: 0.8rem;
   display: flex;
   align-items: center;
@@ -31,6 +31,7 @@ const baseButton = styled.a`
 export const LocalButton = styled(baseButton)`
   display: flex;
   gap: 4px;
+  user-select: none;
   > svg {
     color: ${(props) => props.theme.colors['base-purple']};
   }

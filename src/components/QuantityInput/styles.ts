@@ -20,13 +20,10 @@ export const QuantityInputContainer = styled.div`
     border: none;
     text-align: center;
 
-    color: ${({ theme }) => theme.colors['base-text']}
-    
+    color: ${({ theme }) => theme.colors['base-text']};
     &:focus {
       outline: none;
     }
-
-
   }
 `
 
