@@ -3,7 +3,7 @@ import { IconInfo, InfoIconContainer } from './style'
 
 interface InfoIconProps {
   icon: ReactNode
-  text: string
+  text: string | ReactNode
   iconBg: string
 }
 
