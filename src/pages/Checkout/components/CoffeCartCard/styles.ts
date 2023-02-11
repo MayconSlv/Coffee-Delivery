@@ -56,6 +56,13 @@ export const RemoveButton = styled.button`
   color: ${({ theme }) => theme.colors['base-text']};
   height: 3.2rem;
 
+  cursor: pointer;
+  transition: 0.4s;
+
+  :hover {
+    background: ${({ theme }) => theme.colors['base-hover']};
+  }
+
   svg {
     color: ${({ theme }) => theme.colors['base-purple']};
   }

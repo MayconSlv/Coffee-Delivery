@@ -18,8 +18,10 @@ export const AddressCardContainer = styled(BaseCard)`
     background: ${({ theme }) => theme.colors['base-input']};
     border-radius: 4px;
     padding: 1.2rem;
-    :focus {
+
+    &:focus {
       outline: none;
+      border: 1px solid ${({ theme }) => theme.colors['base-yellow']};
     }
   }
 `

@@ -92,6 +92,12 @@ export const FooterButtons = styled.div`
     background: ${({ theme }) => theme.colors['purple-dark']};
     color: ${({ theme }) => theme.colors['base-white']};
     border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    :hover {
+      background: ${({ theme }) => theme.colors['base-purple']};
+    }
   }
 `
 

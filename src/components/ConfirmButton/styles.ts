@@ -11,4 +11,10 @@ export const ConfirmButtonContainer = styled.button`
 
   font-size: 1.4rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+
+  :hover {
+    background: ${({ theme }) => theme.colors['yellow-dark']};
+  }
 `
