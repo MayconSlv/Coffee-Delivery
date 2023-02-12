@@ -8,6 +8,7 @@ import {
   FooterButtons,
 } from './style'
 import { QuantityInput } from '../../../../components/QuantityInput'
+import { FormatedMoney } from '../../../../utils/FormatedMoney'
 
 interface Coffee {
   id: number
@@ -23,9 +24,11 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
+  const formatedPrice = FormatedMoney(coffee.price)
+
   return (
     <CardContainer>
-      <img src={`/coffees/${coffee.photo}`} alt='' />
+      <img src={`/coffees/${coffee.photo}`} alt="" />
 
       <Tags>
         {coffee.tags.map((tag) => (
@@ -41,13 +44,13 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
       <CardFooter>
         <Price>
           <span>R$</span>
-          <span>{coffee.price}</span>
+          <span>{formatedPrice}</span>
         </Price>
 
         <FooterButtons>
           <QuantityInput />
           <button>
-            <ShoppingCart weight='fill' size={22} />
+            <ShoppingCart weight="fill" size={22} />
           </button>
         </FooterButtons>
       </CardFooter>
