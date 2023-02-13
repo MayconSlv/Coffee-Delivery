@@ -4,7 +4,7 @@ import { CoffeeCart } from './components/CoffeesCarts'
 
 export function Checkout() {
   return (
-    <FormContainer className='container'>
+    <FormContainer className="container">
       <div>
         <AddressForm />
       </div>

@@ -13,7 +13,7 @@ export function SubmitCoffees() {
           <p>Entrega</p>
           <p>R$ 3,00</p>
         </div>
-        <div className='total'>
+        <div className="total">
           <p>Total</p>
           <p>R$ 32,20</p>
         </div>
