@@ -26,18 +26,10 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
-  const [quantity, setQuantity] = useState(1)
-
   const { addCoffeeToCart } = useContext(CartContext)
   const formatedPrice = FormatedMoney(coffee.price)
 
-  function handleAddToCart() {
-    const coffeeToAdd = {
-      ...coffee,
-      quantity,
-    }
-    addCoffeeToCart(coffeeToAdd)
-  }
+  const [quantity, setQuantity] = useState(1)
 
   function handleIncress() {
     setQuantity((state) => state + 1)
@@ -45,6 +37,14 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
 
   function handleDecress() {
     setQuantity((state) => state - 1)
+  }
+
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    }
+    addCoffeeToCart(coffeeToAdd)
   }
 
   return (
@@ -71,8 +71,8 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
         <FooterButtons>
           <QuantityInput
             quantity={quantity}
-            onIncress={handleIncress}
             onDecress={handleDecress}
+            onIncress={handleIncress}
           />
           <button onClick={handleAddToCart}>
             <ShoppingCart weight="fill" size={22} />

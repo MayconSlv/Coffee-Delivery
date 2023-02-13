@@ -16,7 +16,8 @@ interface CartItemProps {
 }
 
 export function CoffeeCartCard({ cartItem }: CartItemProps) {
-  const formatedPrice = FormatedMoney(cartItem.price)
+  const totalPrice = cartItem.quantity * cartItem.price
+  const formatedPrice = FormatedMoney(totalPrice)
 
   return (
     <CoffeeCartCardContainer>
