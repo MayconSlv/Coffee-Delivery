@@ -10,7 +10,7 @@ import {
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { FormatedMoney } from '../../../../utils/FormatedMoney'
 
-interface Coffee {
+export interface Coffee {
   id: number
   photo: string
   tags: string[]
