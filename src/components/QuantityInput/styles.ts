@@ -38,4 +38,5 @@ export const IconsButton = styled.button.attrs({
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors['base-purple']};
+  cursor: pointer;
 `

@@ -9,6 +9,8 @@ import {
 } from './style'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { FormatedMoney } from '../../../../utils/FormatedMoney'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../../../contexts/cartContext'
 
 export interface Coffee {
   id: number
@@ -24,7 +26,26 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
+  const [quantity, setQuantity] = useState(1)
+
+  const { addCoffeeToCart } = useContext(CartContext)
   const formatedPrice = FormatedMoney(coffee.price)
+
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    }
+    addCoffeeToCart(coffeeToAdd)
+  }
+
+  function handleIncress() {
+    setQuantity((state) => state + 1)
+  }
+
+  function handleDecress() {
+    setQuantity((state) => state - 1)
+  }
 
   return (
     <CardContainer>
@@ -48,8 +69,12 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
         </Price>
 
         <FooterButtons>
-          <QuantityInput />
-          <button>
+          <QuantityInput
+            quantity={quantity}
+            onIncress={handleIncress}
+            onDecress={handleDecress}
+          />
+          <button onClick={handleAddToCart}>
             <ShoppingCart weight="fill" size={22} />
           </button>
         </FooterButtons>

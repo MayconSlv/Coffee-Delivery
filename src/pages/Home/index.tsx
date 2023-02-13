@@ -5,7 +5,7 @@ import { Intro } from './components/Intro/index'
 
 export function Home() {
   return (
-    <MainContent className='container'>
+    <MainContent className="container">
       <Intro />
       <h2>Nossos cafés</h2>
       <CoffeeContainer>
