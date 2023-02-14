@@ -10,8 +10,8 @@ export function PaymentMethod() {
   return (
     <PaymentMethodContainer>
       <AddressTitle
-        title='Pagamento'
-        subtitle='O pagamento é feito na entrega. Escolha a forma que deseja pagar'
+        title="Pagamento"
+        subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
         icon={<CurrencyDollar size={22} color={colors['base-purple']} />}
       />
       <div>

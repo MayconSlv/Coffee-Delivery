@@ -2,6 +2,14 @@ import { ConfirmButton } from '../../../../components/ConfirmButton'
 import { SubmitCoffeesContainer, TotalPrice } from './sytles'
 
 export function SubmitCoffees() {
+  // const { cartItems } = useContext(CartContext)
+  // const totalItemsPrice = cartItems.reduce(function (
+  //   acumulator: number,
+  //   price: number,
+  // ) {
+  //   return acumulator + price
+  // })
+
   return (
     <SubmitCoffeesContainer>
       <TotalPrice>

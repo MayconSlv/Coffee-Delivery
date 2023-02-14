@@ -8,16 +8,27 @@ import {
 } from './styles'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { Trash } from 'phosphor-react'
-import { CartItem } from '../../../../contexts/cartContext'
+import { CartContext, CartItem } from '../../../../contexts/cartContext'
 import { FormatedMoney } from '../../../../utils/FormatedMoney'
+import { useContext } from 'react'
 
-interface CartItemProps {
+interface CoffeeCartCardProps {
   cartItem: CartItem
 }
 
-export function CoffeeCartCard({ cartItem }: CartItemProps) {
+export function CoffeeCartCard({ cartItem }: CoffeeCartCardProps) {
+  const { changeCoffeeQuantity } = useContext(CartContext)
+
   const totalPrice = cartItem.quantity * cartItem.price
   const formatedPrice = FormatedMoney(totalPrice)
+
+  function handleIncressQuantity() {
+    changeCoffeeQuantity(cartItem.id, 'incress')
+  }
+
+  function handleDecressQuantity() {
+    changeCoffeeQuantity(cartItem.id, 'decress')
+  }
 
   return (
     <CoffeeCartCardContainer>
@@ -27,7 +38,11 @@ export function CoffeeCartCard({ cartItem }: CartItemProps) {
           <CardDetails>
             <p>{cartItem.name}</p>
             <CardActions>
-              <QuantityInput />
+              <QuantityInput
+                quantity={cartItem.quantity}
+                onDecress={handleDecressQuantity}
+                onIncress={handleIncressQuantity}
+              />
               <RemoveButton>
                 <Trash size={16} />
                 REMOVER
