@@ -9,8 +9,11 @@ export function SubmitCoffees() {
   const totalItemsPrice = cartItems.reduce((acumulator, total) => {
     return acumulator + total.price * total.quantity
   }, 0)
-  console.log(totalItemsPrice)
+  const totalPrice = totalItemsPrice + 3
+
+  // formated prices
   const formatedTotalItemsPrice = FormatedMoney(totalItemsPrice)
+  const formatedTotalPrice = FormatedMoney(totalPrice)
 
   return (
     <SubmitCoffeesContainer>
@@ -25,7 +28,7 @@ export function SubmitCoffees() {
         </div>
         <div className="total">
           <p>Total</p>
-          <p>R$ 32,20</p>
+          <p>R$ {formatedTotalPrice}</p>
         </div>
       </TotalPrice>
 
