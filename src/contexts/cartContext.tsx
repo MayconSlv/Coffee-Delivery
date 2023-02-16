@@ -10,6 +10,7 @@ interface CartContextType {
   cartItems: CartItem[]
   coffesCartQuantity: number
   addCoffeeToCart: (coffee: CartItem) => void
+  removeCoffeeById: (coffeeId: number) => void
   changeCoffeeQuantity: (
     cartItemid: number,
     type: 'incress' | 'decress',
@@ -63,6 +64,15 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
     setCartItems(newCart)
   }
+
+  function removeCoffeeById(coffeeId: number) {
+    const newCoffeesWithoutCoffeeDeleted = cartItems.filter((coffee) => {
+      return coffee.id !== coffeeId
+    })
+
+    setCartItems(newCoffeesWithoutCoffeeDeleted)
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -70,6 +80,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         addCoffeeToCart,
         coffesCartQuantity,
         changeCoffeeQuantity,
+        removeCoffeeById,
       }}
     >
       {children}
