@@ -24,7 +24,10 @@ export const CartContext = createContext({} as CartContextType)
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
-  const coffesCartQuantity = cartItems.length
+
+  const coffesCartQuantity = cartItems.reduce((acumulator, total) => {
+    return acumulator + total.quantity
+  }, 0)
 
   function addCoffeeToCart(coffee: CartItem) {
     const coffeeAlreadyExistInCart = cartItems.findIndex(

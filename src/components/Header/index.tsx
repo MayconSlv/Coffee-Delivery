@@ -25,6 +25,7 @@ export function Header() {
             <CartButton>
               <ShoppingCart size={18} weight="fill" />
               {coffesCartQuantity >= 1 && <span>{coffesCartQuantity}</span>}
+              {coffesCartQuantity >= 9 && <span>9+</span>}
             </CartButton>
           </NavLink>
         </div>
