@@ -4,6 +4,7 @@ import { useFormContext } from 'react-hook-form'
 
 import { MapPin } from 'phosphor-react'
 import { AddressCardContainer, InputsLayout } from './styles'
+import { Input } from '../../../../components/input'
 
 export function AddressFormInputs() {
   const { colors } = useTheme()
@@ -11,12 +12,9 @@ export function AddressFormInputs() {
 
   const checkCEP = (e: any) => {
     const cep = e.target.value.replace(/\D/g, '')
-    console.log(cep)
-
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setValue('street', data.logradouro)
         setValue('neighbor', data.bairro)
         setValue('city', data.localidade)
@@ -33,28 +31,29 @@ export function AddressFormInputs() {
       />
 
       <InputsLayout>
-        <input
+        <Input
           type="text"
           className="cep"
           placeholder="CEP"
+          {...register('cep')}
           onBlur={checkCEP}
         />
-        <input
+        <Input
           type="text"
           className="street"
           placeholder="Rua"
           {...register('street')}
         />
-        <input type="number" placeholder="Número" {...register('number')} />
-        <input
+        <Input type="number" placeholder="Número" {...register('number')} />
+        <Input
           type="text"
           className="complement"
           placeholder="Complemento"
           {...register('complement')}
         />
-        <input type="text" placeholder="Bairro" {...register('neighbor')} />
-        <input type="text" placeholder="Cidade" {...register('city')} />
-        <input type="text" placeholder="UF" {...register('uf')} />
+        <Input type="text" placeholder="Bairro" {...register('neighbor')} />
+        <Input type="text" placeholder="Cidade" {...register('city')} />
+        <Input type="text" placeholder="UF" {...register('uf')} />
       </InputsLayout>
     </AddressCardContainer>
   )
