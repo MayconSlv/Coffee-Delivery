@@ -6,6 +6,7 @@ import { CoffeeCart } from './components/CoffeesCarts'
 import * as zod from 'zod'
 import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useNavigate } from 'react-router-dom'
 
 enum PaymentMethods {
   credit = 'credit',
@@ -34,9 +35,12 @@ export function Checkout() {
   })
 
   const { handleSubmit } = addressForm
+  const navigate = useNavigate()
 
   function handleConfirmForm(data: AddressFormData) {
-    console.log(data)
+    navigate('/Success', {
+      state: data,
+    })
   }
 
   return (

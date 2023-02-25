@@ -5,7 +5,7 @@ import { useTheme } from 'styled-components'
 import { PaymentInput } from './PaymentInput'
 import { useFormContext } from 'react-hook-form'
 
-const paymentMethods = {
+export const paymentMethods = {
   credit: {
     label: 'Cartão de crédito',
     icon: <CreditCard size={16} />,

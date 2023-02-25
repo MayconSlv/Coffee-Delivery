@@ -4,7 +4,7 @@ import deliveryImage from '../../assets/Illustration.svg'
 
 export function Success() {
   return (
-    <SuccessContainer className='container'>
+    <SuccessContainer className="container">
       <SuccessTitle>
         <h2>Uhu! O pedido foi confirmado</h2>
         <p>Agora é só aguardar que logo o café chegará até você</p>
@@ -13,7 +13,7 @@ export function Success() {
       <SuccessSection>
         <DeliveryDetails />
 
-        <img src={deliveryImage} alt='' />
+        <img src={deliveryImage} alt="" />
       </SuccessSection>
     </SuccessContainer>
   )
