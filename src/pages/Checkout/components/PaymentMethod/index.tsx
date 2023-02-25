@@ -3,6 +3,7 @@ import { AddressTitle } from '../AddressTitle'
 import { PaymentMethodContainer } from './styles'
 import { useTheme } from 'styled-components'
 import { PaymentInput } from './PaymentInput'
+import { useFormContext } from 'react-hook-form'
 
 const paymentMethods = {
   credit: {
@@ -21,6 +22,7 @@ const paymentMethods = {
 
 export function PaymentMethod() {
   const { colors } = useTheme()
+  const { register } = useFormContext()
 
   return (
     <PaymentMethodContainer>
@@ -37,6 +39,7 @@ export function PaymentMethod() {
             icon={icon}
             label={label}
             value={key}
+            {...register('paymentMethod')}
           />
         ))}
       </div>
