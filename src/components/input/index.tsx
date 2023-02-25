@@ -4,5 +4,5 @@ import { InputContainer } from './styles'
 type InputProps = InputHTMLAttributes<HTMLInputElement>
 
 export function Input({ ...props }: InputProps) {
-  return <InputContainer />
+  return <InputContainer {...props} />
 }
