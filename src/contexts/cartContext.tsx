@@ -21,6 +21,8 @@ interface CartContextProviderProps {
   children: ReactNode
 }
 
+const COFFEE_STORAGE_KEY = 'coffeeDelivery:CartItem'
+
 export const CartContext = createContext({} as CartContextType)
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
@@ -35,8 +37,6 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   const coffesCartQuantity = cartItems.reduce((acumulator, total) => {
     return acumulator + total.quantity
   }, 0)
-
-  const COFFEE_STORAGE_KEY = 'coffeeDeliveryCartItem'
 
   function addCoffeeToCart(coffee: CartItem) {
     const coffeeAlreadyExistInCart = cartItems.findIndex(
