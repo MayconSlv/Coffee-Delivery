@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Clock, CurrencyDollar, MapPin } from 'phosphor-react'
 import { InfoIcon } from '../../../../components/InfoIcon'
 import { DeliveryDetailsContainer } from './styles'

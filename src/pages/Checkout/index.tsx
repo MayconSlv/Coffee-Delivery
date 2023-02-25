@@ -7,6 +7,8 @@ import * as zod from 'zod'
 import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../contexts/cartContext'
 
 enum PaymentMethods {
   credit = 'credit',
@@ -37,10 +39,13 @@ export function Checkout() {
   const { handleSubmit } = addressForm
   const navigate = useNavigate()
 
+  const { cleanCart } = useContext(CartContext)
+
   function handleConfirmForm(data: AddressFormData) {
     navigate('/Success', {
       state: data,
     })
+    cleanCart()
   }
 
   return (
