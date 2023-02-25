@@ -5,14 +5,13 @@ import { useFormContext } from 'react-hook-form'
 import { MapPin } from 'phosphor-react'
 import { AddressCardContainer, InputsLayout } from './styles'
 import { Input } from '../../../../components/Input'
-import { FormEvent } from 'react'
 
 export function AddressFormInputs() {
   const { colors } = useTheme()
   const { register, setValue } = useFormContext()
 
-  const checkCEP = (e: FormEvent) => {
-    const cep = e.target.value.replace(/\D/g, '')
+  const checkCEP = (event: any) => {
+    const cep = event.target.value.replace(/\D/g, '')
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((res) => res.json())
       .then((data) => {
