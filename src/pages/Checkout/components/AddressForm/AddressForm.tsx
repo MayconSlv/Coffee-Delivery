@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form'
 
 import { MapPin } from 'phosphor-react'
 import { AddressCardContainer, InputsLayout } from './styles'
-import { Input } from '../../../../components/Input/index'
+import { Input } from '../../../../components/Input'
 
 export function AddressFormInputs() {
   const { colors } = useTheme()
