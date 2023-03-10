@@ -1,5 +1,5 @@
 <h1 align="center">
-  Coffee Delivery
+  Coffee Delivery☕
 </h1>
 
 ## 🚨Sobre:
@@ -11,14 +11,12 @@ O Checkout, corresponde a página onde é feita o cadastro de endereço, e todos
 
 ##
 
-<img src="./src/assets/dt-money.gif"/>
+<img src="./src/assets/coffee-delivery.gif"/>
 
 ## 🔨Ferramentas:
  - TypeScript
  - React
  - Styled Components
- - JsonServer
+ - Router
  - Hook form
- - Memo
- - Context selector
- - Axios
+ - Zod
